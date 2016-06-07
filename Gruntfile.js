@@ -2,6 +2,14 @@ module.exports = function (grunt) {
 	// Load grunt tasks is a special module so we don't have to inject every grunt task into the gruntfile.
     require('load-grunt-tasks')(grunt);
 
+    var bowerJsFiles = [
+        'bower_components/angular/angular.min.js',
+        'bower_components/angular-ui-router/release/angular-ui-router.min.js',
+        'bower_components/lodash/dist/lodash.min.js'
+    ];
+
+    var bowerCssFiles = [];
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -15,6 +23,18 @@ module.exports = function (grunt) {
 	            }
 	        }
 	    },
+
+	    injector: {
+            options: {
+            	ignorePath: 'htdocs',
+                template: 'htdocs/index.html'
+            },
+            dev: {
+                files: {
+                    'htdocs/index.html': bowerJsFiles.concat(bowerCssFiles).concat(['htdocs/**/*.js', '!htdocs/**/*.spec.js', 'htdocs/**/*.css'])
+                }
+            }
+        },
 
 	    watch: {
 	    	sass: {
