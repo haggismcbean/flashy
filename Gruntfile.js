@@ -9,9 +9,9 @@ module.exports = function (grunt) {
 	        options: {
 	            sourceMap: true
 	        },
-	        dist: {
+	        all: {
 	            files: {
-	                '**/*.css': '**/*.scss'
+	                'htdocs/project/sass/style.css': 'htdocs/project/sass/main.scss'
 	            }
 	        }
 	    },

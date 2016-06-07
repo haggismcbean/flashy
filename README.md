@@ -5,7 +5,7 @@ Angular flash cards app with unit testing
 
  - Grunt - done
  - Bower - done
- - Sass
+ - Sass - done
  - Karma (+ coverage)
  - Lodash
  - Angular
