@@ -18,10 +18,57 @@ module.exports = function (grunt) {
 
 	    watch: {
 	    	sass: {
-	    		files: '**/*.scss',
+	    		files: 'htdocs/**/*.scss',
 	    		tasks: ['sass']
 	    	}
-	    }
+	    },
+
+	    karma: {
+            unit: {
+                options: {
+                    basePath: '',
+                    frameworks: ['jasmine'],
+                    // Start these browsers, currently available:
+                    // - Chrome
+                    // - ChromeCanary
+                    // - Firefox
+                    // - Opera
+                    // - Safari (only Mac)
+                    // - PhantomJS
+                    // - IE (only Windows)
+                    browsers: [
+                        // 'Chrome',
+                        // 'Firefox',
+                        'PhantomJS'
+                    ],
+                    colors: true,
+                    reporters: ['progress','coverage'],
+                    autoWatch: true,
+                    // level of logging
+                    // possible values: OFF || ERROR || WARN || INFO || DEBUG
+                    logLevel: 'INFO',
+                    // list of files / patterns to load in the browser
+                    files: 'htdocs/**/*.spec.js',
+                    plugins: [
+                        'karma-chrome-launcher',
+                        'karma-firefox-launcher',
+                        'karma-jasmine',
+                        'karma-phantomjs-launcher',
+                        'karma-coverage',
+                        'karma-ng-html2js-preprocessor'
+                    ],
+                    ngHtml2JsPreprocessor: {
+                        // strip this from the file path
+                        stripPrefix: 'htdocs/',
+                        prependPrefix: '/'
+                    },
+                    preprocessors: {
+                        'htdocs/src/html/**/*.html': ['ng-html2js'],
+                        'htdocs/src/angular/!(test)/**/!(*.spec).js': 'coverage',
+                    },
+                }
+            }
+        }
 
     });
 
