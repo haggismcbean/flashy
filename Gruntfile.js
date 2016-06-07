@@ -3,9 +3,9 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     var bowerJsFiles = [
-        'bower_components/angular/angular.min.js',
-        'bower_components/angular-ui-router/release/angular-ui-router.min.js',
-        'bower_components/lodash/dist/lodash.min.js'
+        'htdocs/bower_components/angular/angular.min.js',
+        'htdocs/bower_components/angular-ui-router/release/angular-ui-router.min.js',
+        'htdocs/bower_components/lodash/dist/lodash.min.js'
     ];
 
     var bowerCssFiles = [];
@@ -31,7 +31,7 @@ module.exports = function (grunt) {
             },
             dev: {
                 files: {
-                    'htdocs/index.html': bowerJsFiles.concat(bowerCssFiles).concat(['htdocs/**/*.js', '!htdocs/**/*.spec.js', 'htdocs/**/*.css'])
+                    'htdocs/index.html': bowerJsFiles.concat(bowerCssFiles).concat(['htdocs/project/**/*.js', '!htdocs/project/**/*.spec.js', 'htdocs/project/**/*.css'])
                 }
             }
         },
