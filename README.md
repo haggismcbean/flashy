@@ -4,9 +4,11 @@ Angular flash cards app with unit testing
 ##Stage One: Get a decent development environment set up
 
  - Grunt
- - Angular
+ - Bower
  - Sass
  - Karma (+ coverage)
+ - Lodash
+ - Angular
 
 ##Stage Two: Front end pages with mocked apis
 
