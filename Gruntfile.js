@@ -14,10 +14,15 @@ module.exports = function (grunt) {
 	                '**/*.css': '**/*.scss'
 	            }
 	        }
+	    },
+
+	    watch: {
+	    	sass: {
+	    		files: '**/*.scss',
+	    		tasks: ['sass']
+	    	}
 	    }
 
     });
-
-    grunt.registerTask('watch', ['sass']);
 
 };
