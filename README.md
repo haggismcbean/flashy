@@ -6,8 +6,8 @@ Angular flash cards app with unit testing
  - Grunt - done
  - Bower - done
  - Sass - done
- - Karma (+ coverage)
- - Lodash
+ - Karma (+ coverage) - done
+ - Lodash - done
  - Angular
 
 ##Stage Two: Front end pages with mocked apis
