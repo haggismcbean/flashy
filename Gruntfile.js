@@ -68,7 +68,7 @@ module.exports = function (grunt) {
                     // possible values: OFF || ERROR || WARN || INFO || DEBUG
                     logLevel: 'INFO',
                     // list of files / patterns to load in the browser
-                    files: 'htdocs/**/*.spec.js',
+                    files: ['htdocs/**/*.spec.js'],
                     plugins: [
                         'karma-chrome-launcher',
                         'karma-firefox-launcher',
