@@ -10,9 +10,19 @@ Angular flash cards app with unit testing
  - Lodash - done
  - Angular - done
 
+##Stage One Point Five: Assets
+
+ - fonts
+ - colours
+ - grid
+ - header
+ - footer
+ - card
+ - deck
+ - table
+
 ##Stage Two: Front end pages with mocked apis
 
- - Log in
  - Drill
  - Deck builder/manager
 

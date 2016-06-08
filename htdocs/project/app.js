@@ -23,7 +23,7 @@ function(
     $stateProvider
     .state('home', {
         url:'/home',
-        templateUrl: 'project/views/landing/landing.html',
+        templateUrl: 'project/views/drill/drill.html',
         data: {
             title: 'Flashy'
         }
