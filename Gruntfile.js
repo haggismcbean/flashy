@@ -58,7 +58,7 @@ module.exports = function (grunt) {
                     // - IE (only Windows)
                     browsers: [
                         // 'Chrome',
-                        // 'Firefox',
+                        // 'Firefox'
                         'PhantomJS'
                     ],
                     colors: true,
@@ -68,7 +68,11 @@ module.exports = function (grunt) {
                     // possible values: OFF || ERROR || WARN || INFO || DEBUG
                     logLevel: 'INFO',
                     // list of files / patterns to load in the browser
-                    files: ['htdocs/**/*.spec.js'],
+                    files: bowerJsFiles.concat([
+                        'htdocs/bower_components/angular-mocks/angular-mocks.js', 
+                        'htdocs/bower_components/karma-read-json/karma-read-json.js', 
+                        'htdocs/project/**/*.js'
+                    ]),
                     plugins: [
                         'karma-chrome-launcher',
                         'karma-firefox-launcher',
