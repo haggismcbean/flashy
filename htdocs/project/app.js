@@ -23,10 +23,7 @@ function(
     $stateProvider
     .state('home', {
         url:'/home',
-        templateUrl: 'project/views/drill/drill.html',
-        data: {
-            title: 'Flashy'
-        }
+        templateUrl: 'project/views/drill/drill.html'
     });
 }]);
 
@@ -35,5 +32,5 @@ app.run( [ function () {
 }]);
 
 app.controller('AppController', [ function() {
-    console.log("here");
+    
 }]);
