@@ -15,19 +15,19 @@ function(
     // set default state:
     // Use function instead of $urlRouterProvider.otherwise('hub')
     // because bug makes it infinite redirect loop
-    // $urlRouterProvider.otherwise( function($injector, $location) {
-    //     var $state = $injector.get('$state');
-    //     $state.go('hub');
-    // });
+    $urlRouterProvider.otherwise( function($injector, $location) {
+        var $state = $injector.get('$state');
+        $state.go('home');
+    });
 
-    // $stateProvider
-    // .state('privacy.policy', {
-    //     url:'/privacy',
-    //     templateUrl: PRIVACY,
-    //     data: {
-    //         title: 'Privacy Policy'
-    //     }
-    // });
+    $stateProvider
+    .state('home', {
+        url:'/home',
+        templateUrl: 'project/views/landing/landing.html',
+        data: {
+            title: 'Flashy'
+        }
+    });
 }]);
 
 app.run( [ function () {
