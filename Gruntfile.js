@@ -71,6 +71,7 @@ module.exports = function (grunt) {
                     files: bowerJsFiles.concat([
                         'htdocs/bower_components/angular-mocks/angular-mocks.js', 
                         'htdocs/bower_components/karma-read-json/karma-read-json.js', 
+                        'htdocs/project/**/*.html',
                         'htdocs/project/**/*.js'
                     ]),
                     plugins: [
@@ -84,7 +85,7 @@ module.exports = function (grunt) {
                     ngHtml2JsPreprocessor: {
                         // strip this from the file path
                         stripPrefix: 'htdocs/',
-                        prependPrefix: '/'
+                        moduleName: 'templates'
                     },
                     preprocessors: {
                         'htdocs/project/**/*.html': ['ng-html2js'],
