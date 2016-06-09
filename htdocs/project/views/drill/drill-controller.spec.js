@@ -27,5 +27,4 @@ describe('controller: Drill', function(){
     it('It should initialise', function(){
         expect(scope).toBeDefined();
     });
-    
 });

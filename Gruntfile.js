@@ -87,8 +87,8 @@ module.exports = function (grunt) {
                         prependPrefix: '/'
                     },
                     preprocessors: {
-                        'htdocs/src/html/**/*.html': ['ng-html2js'],
-                        'htdocs/src/angular/!(test)/**/!(*.spec).js': 'coverage',
+                        'htdocs/project/**/*.html': ['ng-html2js'],
+                        'htdocs/project/**/!(*.spec).js': 'coverage',
                     },
                 }
             }
