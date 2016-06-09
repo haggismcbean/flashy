@@ -12,8 +12,9 @@ Angular flash cards app with unit testing
 
 ##Stage One Point Five: Assets
 
- - fonts
- - colours
+ - fonts - done
+ - colours - done
+ - universal
  - grid
  - header
  - footer

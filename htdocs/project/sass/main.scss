@@ -1,0 +1,13 @@
+@import 'elements/colours';
+
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	background-color: $beige;
+}
+
+h1, h2, h3, p, li {
+	color: $black;
+}
