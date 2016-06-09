@@ -1,6 +1,6 @@
 app.controller('DrillController', [ '$scope', function($scope) {
     var scope = {
-    	test: testFunction
+    	testFunction: testFunction
     }
 
     _.assign($scope, scope);

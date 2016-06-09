@@ -9,6 +9,7 @@ describe('controller: Drill', function(){
     beforeEach(function(){
         // boot modules
         module('app');
+        module('stateMock');
         module('ngMock');
        
         // inject
@@ -27,4 +28,9 @@ describe('controller: Drill', function(){
     it('It should initialise', function(){
         expect(scope).toBeDefined();
     });
+
+    it('Should return true when test function is ran', function(){
+        scope.$apply();
+        expect(scope.testFunction()).toBe(true);
+    })
 });
