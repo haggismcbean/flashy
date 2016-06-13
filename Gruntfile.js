@@ -89,6 +89,7 @@ module.exports = function (grunt) {
                     },
                     preprocessors: {
                         'htdocs/project/**/*.html': ['ng-html2js'],
+                        'htdocs/project/app.js': 'coverage',
                         'htdocs/project/!(test)/**/!(*.spec).js': 'coverage',
                     },
                 }

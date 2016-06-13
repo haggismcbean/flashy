@@ -24,6 +24,10 @@ function(
     .state('home', {
         url:'/home',
         templateUrl: 'project/views/drill/drill.html'
+    })
+    .state('components', {
+        url:'/components',
+        templateUrl: 'project/views/components/components.html'
     });
 }]);
 

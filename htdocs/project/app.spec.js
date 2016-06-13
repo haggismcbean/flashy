@@ -1,26 +1,28 @@
-describe('controller: Drill', function(){
+describe('module: App', function(){
     var $rootScope;
     var $compile;
     var scope;
     var $controller;
     var ctrl;
     var $state;
+    var $location;
 
     beforeEach(function(){
         // boot modules
         module('app');
         module('stateMock');
-        module('ngMock');
-       
+       	module('ngMock');
+
         // inject
-        inject(function ($rootScope, _$controller_, _$state_, _$compile_) {
+        inject(function ($rootScope, _$controller_, _$state_, _$compile_, _$location_) {
             scope = $rootScope.$new();
             $controller = _$controller_;
             $state = _$state_;
+            $location = _$location_;
             $compile = _$compile_;
         });
 
-        ctrl = $controller('DrillController', {
+        ctrl = $controller('AppController', {
             $scope: scope
         });
     });
@@ -29,9 +31,9 @@ describe('controller: Drill', function(){
         expect(scope).toBeDefined();
     });
 
-    it('Should return true when test function is ran', function(){
-        scope.$apply();
-        expect(scope.testFunction()).toBe(true);
-    })
+
+    xit('should default state to home page', inject(function($state,$rootScope){
+  		
+	}));
 
 });
