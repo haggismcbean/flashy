@@ -1,0 +1,48 @@
+h1{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 26px;
+}
+
+h2{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+h3{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+}
+
+p, li, span{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+strong{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 14px;	
+}
+
+em{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 14px;	
+}
+
+a{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	color: $green;
+	text-decoration: none;
+	&:hover{
+		color: darken($green, 10%);
+	}
+}

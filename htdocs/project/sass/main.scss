@@ -1,13 +1,14 @@
 @import 'elements/colours';
-
-* {
-	font-family: 'Roboto', sans-serif;
-}
+@import 'elements/fonts';
+@import 'elements/type';
+@import 'elements/cards';
 
 body {
 	background-color: $beige;
 }
 
-h1, h2, h3, p, li {
-	color: $black;
+li{
+	padding: 10px;
 }
+
+@import 'pages/components';

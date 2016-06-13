@@ -8,7 +8,9 @@ module.exports = function (grunt) {
         'htdocs/bower_components/lodash/dist/lodash.min.js'
     ];
 
-    var bowerCssFiles = [];
+    var bowerCssFiles = [
+        'htdocs/bower_components/reset-css/reset.css'
+    ];
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
