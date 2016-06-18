@@ -1,48 +1,57 @@
-h1{
+h1 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
-	font-size: 26px;
+	font-size: 2.6rem;
 }
 
-h2{
+h2 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
-	font-size: 20px;
+	font-size: 2.0rem;
 }
 
-h3{
+h3 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
-	font-size: 18px;
+	font-size: 1.8rem;
 }
 
-p, li, span{
+p, li, span {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
-	font-size: 14px;
-	line-height: 22px;
+	font-size: 1.4rem;
+	line-height: 2.2rem;
 }
 
-strong{
+strong {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
-	font-size: 14px;	
+	font-size: 1.4rem;	
 }
 
-em{
+em {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	font-style: italic;
-	font-size: 14px;	
+	font-size: 1.4rem;	
 }
 
-a{
+a, .Link {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
-	font-size: 14px;
+	font-size: 1.4rem;
 	color: $green;
 	text-decoration: none;
-	&:hover{
+	cursor: pointer;
+	&:hover {
 		color: darken($green, 10%);
+	}
+}
+
+.Link--white{
+	@extend .Link;
+	color: white;
+	&:hover{
+		color: lighten($green, 20%);
 	}
 }

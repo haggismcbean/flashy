@@ -25,6 +25,10 @@ function(
         url:'/home',
         templateUrl: 'project/views/drill/drill.html'
     })
+    .state('manage', {
+        url:'/manage',
+        templateUrl: 'project/views/manage/manage.html'
+    })
     .state('components', {
         url:'/components',
         templateUrl: 'project/views/components/components.html'

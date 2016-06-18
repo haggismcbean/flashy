@@ -1,0 +1,15 @@
+.Header {
+	background-color: $bright-green;
+	padding: 20px;
+}
+
+.Header-nav {
+	float: right;
+	color: white;
+	ol, li{
+		display: inline-block;
+	}
+	li {
+		padding-left: 20px;
+	}
+}

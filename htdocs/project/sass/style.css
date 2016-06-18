@@ -170,45 +170,61 @@
 h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-size: 26px; }
+  font-size: 2.6rem; }
 
 h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-size: 20px; }
+  font-size: 2.0rem; }
 
 h3 {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-size: 18px; }
+  font-size: 1.8rem; }
 
 p, li, span {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  font-size: 14px;
-  line-height: 22px; }
+  font-size: 1.4rem;
+  line-height: 2.2rem; }
 
 strong {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-size: 14px; }
+  font-size: 1.4rem; }
 
 em {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-style: italic;
-  font-size: 14px; }
+  font-size: 1.4rem; }
 
-a {
+a, .Link, .Link--white {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #828E5E;
-  text-decoration: none; }
-  a:hover {
+  text-decoration: none;
+  cursor: pointer; }
+  a:hover, .Link:hover, .Link--white:hover {
     color: #666f4a; }
 
-.card {
+.Link--white {
+  color: white; }
+  .Link--white:hover {
+    color: #b2ba98; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #edeae6; }
+
+.Logo {
+  display: inline-block;
+  color: white; }
+
+.Card {
   background-color: white;
   display: block;
   width: 100%;
@@ -220,18 +236,24 @@ a {
   border-radius: 3px;
   cursor: pointer;
   box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.36); }
-  .card h2 {
+  .Card h2 {
     display: block;
     margin-bottom: 15px; }
-  .card p {
+  .Card p {
     display: inline-block; }
-  .card img {
+  .Card img {
     display: block; }
 
-body {
-  background-color: #edeae6; }
+.Header {
+  background-color: #6B8E4E;
+  padding: 20px; }
 
-li {
-  padding: 10px; }
+.Header-nav {
+  float: right;
+  color: white; }
+  .Header-nav ol, .Header-nav li {
+    display: inline-block; }
+  .Header-nav li {
+    padding-left: 20px; }
 
 /*# sourceMappingURL=style.css.map */

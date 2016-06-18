@@ -1,14 +1,24 @@
+////////////////////////////////////////////////////
+// https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md
+
+//////////////////////////
+// Elements
+//////////////////////////
+
 @import 'elements/colours';
 @import 'elements/fonts';
 @import 'elements/type';
+@import 'elements/global-styles';
+@import 'elements/logo';
+
 @import 'elements/cards';
 
-body {
-	background-color: $beige;
-}
+//////////////////////////
+// Directives
+//////////////////////////
 
-li{
-	padding: 10px;
-}
+@import 'directives/header';
 
-@import 'pages/components';
+//////////////////////////
+// Views
+//////////////////////////
