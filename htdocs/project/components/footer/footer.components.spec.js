@@ -1,4 +1,4 @@
-describe('Directive: flFooter', function () {
+describe('Component: flFooter', function () {
 
     var $rootScope;
     var scope;

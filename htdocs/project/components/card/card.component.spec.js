@@ -1,4 +1,4 @@
-describe('Directive: flCard', function () {
+describe('Component: flCard', function () {
 
     var $rootScope;
     var scope;
@@ -28,8 +28,17 @@ describe('Directive: flCard', function () {
 
     });
 
-    it('It should initialise', function(){
+    it('should initialise', function(){
         expect(scope).toBeDefined();
+    });
+
+    it('should show the front at the start', function() {
+        expect(scope.isFront).toBe(true);
+    })
+
+    it('should flip card side', function(){
+        scope.flipSide();
+        expect(scope.isFront).toBe(false);
     });
 
 });

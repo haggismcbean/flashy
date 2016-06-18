@@ -12,10 +12,10 @@
 	box-sizing: border-box;
 
 	padding: 20px;
-	
+
 	border-radius: 3px;
 	cursor: pointer;
-	box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.36);
+	// box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.36);
 
 	.Card-header {
 		display: block;
@@ -26,5 +26,25 @@
 	}
 	.Card-image {
 		display: block;
+	}
+
+	.Card-flipper {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 0;
+		height: 0;
+		border-bottom: 40px solid $beige;
+		border-left: 40px solid #eee;
+	}
+
+	.Card-ident {
+		position: absolute;
+		bottom: 10px;
+		left: 0;
+		right: 0;
+		display: block;
+		text-align: center;
 	}
 }

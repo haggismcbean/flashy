@@ -1,7 +1,7 @@
 angular.module('app').directive('flFooter', [function () {
     return {
         restrict: 'A',
-        templateUrl: 'project/directives/footer/footer.html',
+        templateUrl: 'project/components/footer/footer.html',
         replace: true
     };
 }]);
