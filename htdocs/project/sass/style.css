@@ -236,6 +236,26 @@ body {
   display: inline-block;
   color: white; }
 
+.Button, .Button--positive, .Button--negative {
+  border: none;
+  background-color: white;
+  color: #A39D9D;
+  font-size: 1.6rem;
+  font-weight: 400;
+  display: inline;
+  padding: 12px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: color 1s; }
+  .Button:hover, .Button--positive:hover, .Button--negative:hover {
+    color: #8a8383; }
+
+.Button--positive:hover {
+  color: #9ebc86; }
+
+.Button--negative:hover {
+  color: #ff6666; }
+
 .Header {
   background-color: #6B8E4E;
   padding: 20px;

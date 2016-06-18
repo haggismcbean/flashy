@@ -1,0 +1,29 @@
+.Button {
+	border: none;
+	background-color: white;
+	color: $grey;
+	font-size: 1.6rem;
+	font-weight: 400;
+	display: inline;
+	padding: 12px 15px;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: color 1s;
+	&:hover {
+		color: darken($grey, 10%);
+	}
+}
+
+.Button--positive {
+	@extend .Button;
+	&:hover {
+		color: lighten($bright-green, 20%);
+	}
+}
+
+.Button--negative {
+	@extend .Button;
+	&:hover {
+		color: lighten(red, 20%);
+	}
+}
