@@ -1,23 +1,30 @@
 .Card {
+	@extend .u-center;
+	position: relative;
+
 	background-color: white;
+
 	display: block;
-	width: 100%;
+
 	max-width: 700px;
 	height: 400px;
 	max-height: 400px;
-	padding: 20px;
 	box-sizing: border-box;
+
+	padding: 20px;
+	
 	border-radius: 3px;
 	cursor: pointer;
 	box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.36);
-	h2 {
+
+	.Card-header {
 		display: block;
 		margin-bottom: 15px;
 	}
-	p {
+	.Card-text {
 		display: inline-block;
 	}
-	img {
+	.Card-image {
 		display: block;
 	}
 }

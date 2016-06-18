@@ -17,12 +17,12 @@ function(
     // because bug makes it infinite redirect loop
     $urlRouterProvider.otherwise( function($injector, $location) {
         var $state = $injector.get('$state');
-        $state.go('home');
+        $state.go('drill');
     });
 
     $stateProvider
-    .state('home', {
-        url:'/home',
+    .state('drill', {
+        url:'/drill',
         templateUrl: 'project/views/drill/drill.html'
     })
     .state('manage', {

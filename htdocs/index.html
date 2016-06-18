@@ -11,9 +11,9 @@
 		<!-- endinjector -->
 	</head>
 
-	<body ng-controller="AppController">
+	<body ng-controller="AppController" class="box">
 		<div fl-header></div>
-		<div ui-view></div>
+		<div ui-view class="Main"></div>
 		<div fl-footer></div>
 	</body>
 
@@ -22,7 +22,9 @@
 	<script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<script src="/bower_components/lodash/dist/lodash.min.js"></script>
 	<script src="/project/app.js"></script>
-	<script src="/project/directives/header/header.controller.js"></script>
+	<script src="/project/directives/card/card.directive.js"></script>
+	<script src="/project/directives/footer/footer.directive.js"></script>
+	<script src="/project/directives/header/header.directive.js"></script>
 	<script src="/project/test/directives/state.mock.js"></script>
 	<script src="/project/views/drill/drill.controller.js"></script>
 	<!-- endinjector -->

@@ -1,0 +1,14 @@
+.Drill{
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+}
+
+.Deck{
+	flex: 0 1 60px;
+}
+
+.Table{
+	flex: 1 1 auto;
+	position: relative;
+}

@@ -1,4 +1,4 @@
-describe('Directive: flHeader.', function () {
+describe('Directive: flFooter', function () {
 
     var $rootScope;
     var scope;
@@ -20,7 +20,7 @@ describe('Directive: flHeader.', function () {
             pScope =  $rootScope.$new();
 
             // directives 
-            el = angular.element('<div fl-header></div>');
+            el = angular.element('<div fl-footer></div>');
             $compile(el)(pScope);
             $rootScope.$digest();
             scope = el.isolateScope() || el.scope();
