@@ -1,12 +1,17 @@
 .Button {
 	border: none;
 	background-color: white;
-	color: $grey;
+
+	font-family: 'Roboto', sans-serif;
 	font-size: 1.6rem;
 	font-weight: 400;
+	color: $grey;
+	line-height: 4rem;
+
 	display: inline;
-	padding: 12px 15px;
+	padding: 10px 15px;
 	border-radius: 3px;
+	
 	cursor: pointer;
 	transition: color 1s;
 	&:hover {

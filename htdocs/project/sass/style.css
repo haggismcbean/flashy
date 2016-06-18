@@ -227,7 +227,8 @@ body {
 .Main {
   flex: 1 1 auto; }
 
-.u-center, .Card {
+.u-center, .WorkArea {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
@@ -239,11 +240,13 @@ body {
 .Button, .Button--positive, .Button--negative {
   border: none;
   background-color: white;
-  color: #A39D9D;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
+  color: #A39D9D;
+  line-height: 4rem;
   display: inline;
-  padding: 12px 15px;
+  padding: 10px 15px;
   border-radius: 3px;
   cursor: pointer;
   transition: color 1s; }
@@ -275,7 +278,7 @@ body {
 .Card {
   position: relative;
   background-color: white;
-  display: block;
+  display: inline-block;
   max-width: 700px;
   height: 400px;
   max-height: 400px;
@@ -318,5 +321,8 @@ body {
 .Table {
   flex: 1 1 auto;
   position: relative; }
+
+.WorkArea .WorkArea-result {
+  display: inline-block; }
 
 /*# sourceMappingURL=style.css.map */

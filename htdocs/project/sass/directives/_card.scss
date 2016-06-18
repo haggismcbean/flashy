@@ -1,10 +1,9 @@
 .Card {
-	@extend .u-center;
 	position: relative;
 
 	background-color: white;
 
-	display: block;
+	display: inline-block;
 
 	max-width: 700px;
 	height: 400px;
