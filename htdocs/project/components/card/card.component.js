@@ -1,23 +1,20 @@
-angular.module('app').directive('flCard', [function () {
-    
-	function controller($scope) {
-
-		var scope = {
-			isFront: true,
-			flipSide: flipSide
-		}
-
-		_.assign($scope, scope);
-
-		function flipSide() {
-			$scope.isFront = !$scope.isFront;
-		}
+function CardComponentController() {
+	var _this = {
+		isFront: true,
+		flipSide: flipSide
 	}
 
-    return {
-        restrict: 'A',
-        templateUrl: 'project/components/card/card.html',
-        replace: true,
-        controller: controller
-    };
-}]);
+	_.assign(this, _this);
+
+	function flipSide() {
+		this.isFront = !this.isFront;
+	}
+}
+
+angular.module('app').component('flCard', {
+	templateUrl: 'project/components/card/card.html',
+	bindings: {
+		card: '='
+	},
+	controller: CardComponentController
+});

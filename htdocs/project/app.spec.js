@@ -31,9 +31,4 @@ describe('module: App', function(){
         expect(scope).toBeDefined();
     });
 
-
-    xit('should default state to home page', inject(function($state,$rootScope){
-  		
-	}));
-
 });

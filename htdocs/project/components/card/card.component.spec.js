@@ -5,40 +5,32 @@ describe('Component: flCard', function () {
     var $compile;
     var pScope;
 
+    var ctrl;
+
     beforeEach(module('app'));
     beforeEach(module('stateMock'));
     beforeEach(module('ngMock'));
     beforeEach(module('templates'));
 
-    beforeEach(function(){
-        // inject
-        inject(function ($rootScope, _$controller_, _$state_, _$compile_) {
-            $controller = _$controller_;
-            $compile = _$compile_;
-
-            // isoscope
-            pScope =  $rootScope.$new();
-
-            // directives 
-            el = angular.element('<div fl-card></div>');
-            $compile(el)(pScope);
-            $rootScope.$digest();
-            scope = el.isolateScope() || el.scope();
-        });
-
-    });
-
-    it('should initialise', function(){
-        expect(scope).toBeDefined();
-    });
-
-    it('should show the front at the start', function() {
-        expect(scope.isFront).toBe(true);
+    beforeEach(function() {
+        inject(function($componentController) {
+            ctrl = $componentController('flCard');
+        })
     })
 
-    it('should flip card side', function(){
-        scope.flipSide();
-        expect(scope.isFront).toBe(false);
-    });
+    // Test the controller
+
+    it('should initialise', inject(function($componentController) {
+        expect(ctrl).toBeDefined();
+    }));
+
+    it('should start off showing the front', inject(function($componentController) {
+        expect(ctrl.isFront).toBe(true);
+    }));
+
+    it('should flip the card side', inject(function($componentController) {
+        ctrl.flipSide();
+        expect(ctrl.isFront).toBe(false);
+    }));
 
 });

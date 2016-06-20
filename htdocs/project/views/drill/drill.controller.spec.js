@@ -29,9 +29,4 @@ describe('controller: Drill', function(){
         expect(scope).toBeDefined();
     });
 
-    it('Should return true when test function is ran', function(){
-        scope.$apply();
-        expect(scope.testFunction()).toBe(true);
-    })
-
 });
