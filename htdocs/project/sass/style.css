@@ -254,12 +254,20 @@ body {
   transition: color 1s; }
   .Button:hover, .Button--positive:hover, .Button--negative:hover {
     color: #8a8383; }
+  .Button:active, .Button--positive:active, .Button--negative:active {
+    background-color: #A39D9D; }
 
 .Button--positive:hover {
   color: #9ebc86; }
 
+.Button--positive:active {
+  background-color: #9ebc86; }
+
 .Button--negative:hover {
   color: #ff6666; }
+
+.Button--negative:active {
+  background-color: #ff6666; }
 
 .Header {
   background-color: #6B8E4E;
@@ -325,6 +333,10 @@ body {
   position: relative; }
 
 .WorkArea .WorkArea-result {
-  display: inline-block; }
+  display: inline-block;
+  position: relative;
+  top: 50px; }
+  .WorkArea .WorkArea-result :first-child {
+    margin-bottom: 2px; }
 
 /*# sourceMappingURL=style.css.map */

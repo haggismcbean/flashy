@@ -17,6 +17,9 @@
 	&:hover {
 		color: darken($grey, 10%);
 	}
+	&:active {
+		background-color: $grey;
+	}
 }
 
 .Button--positive {
@@ -24,11 +27,17 @@
 	&:hover {
 		color: lighten($bright-green, 20%);
 	}
+	&:active {
+		background-color: lighten($bright-green, 20%);
+	}
 }
 
 .Button--negative {
 	@extend .Button;
 	&:hover {
 		color: lighten(red, 20%);
+	}
+	&:active {
+		background-color: lighten(red, 20%);
 	}
 }
