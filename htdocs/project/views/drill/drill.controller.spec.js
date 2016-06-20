@@ -1,39 +1,43 @@
-describe('controller: Drill', function(){
-    var $rootScope;
-    var $compile;
+describe('controller: DrillController', function(){
     var scope;
-    var $controller;
     var ctrl;
-    var $state;
-
+    
     beforeEach(function(){
         // boot modules
         module('app');
         module('stateMock');
         module('ngMock');
-       
-        // inject
-        inject(function ($rootScope, _$controller_, _$state_, _$compile_) {
-            scope = $rootScope.$new();
-            $controller = _$controller_;
-            $state = _$state_;
-            $compile = _$compile_;
-        });
-
-        ctrl = $controller('DrillController', {
-            $scope: scope
-        });
+        module('templates');
+        
+        // Load controller
+        scope = {};
+        ctrl = $controller('DrillController', {$scope: scope});
     });
     
     it('should initialise', function(){
-        expect(scope).toBeDefined();
+        expect(ctrl).toBeDefined();
     });
 
-    xit('should display finished card if no deck cards left', function() {
-        scope.$apply();
-        // scope.deck = [];
-        // scope.answer(true);
-        expect(scope.deck).toBe(true);
+    it('should add a card to the correct array if answer is correct', function(){
+        ctrl.answer(true);
+        expect(ctrl.correct.length).toBe(1);
+    });
+
+    it('should add a card to the incorrect array if answer is incorrect', function(){
+        ctrl.answer(false);
+        expect(ctrl.incorrect.length).toBe(1);
+    });
+
+    it('should hide the correct and incorrect buttons if there are no cards left in the deck', function() {
+        ctrl.deck = [];
+        ctrl.answer(true);
+        expect(ctrl.isEndOfDeck).toBe(true);
     })
 
+    it('should show the finished card if there are no cards left in the deck', function() {
+        ctrl.deck = [];
+        ctrl.answer(true);
+        expect(ctrl.card === ctrl.finishedCard).toBe(true);
+    })
+    
 });
