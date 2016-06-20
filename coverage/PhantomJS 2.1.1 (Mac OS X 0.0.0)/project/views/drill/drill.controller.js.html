@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">47.06% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>8/17</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>0/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">25% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>1/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">47.06% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>8/17</span>
       </div>
     </div>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -83,7 +83,45 @@
 38
 39
 40
-41</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -121,7 +159,45 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">app.controller('DrillController', [ '$scope', function($scope) {
     var deck = [
@@ -157,11 +233,49 @@
     	}
     ]
 &nbsp;
-    var scope = {
-    	deck: deck
+    var finishedCard = {
+        front: {
+            "title": "You Have Finished",
+            "text": "doop doop dewoop"
+        }
     }
 &nbsp;
-    _.assign($scope, scope);
+    var _this = {
+    	deck: deck,
+        finishedCard: finishedCard,
+        isEndOfDeck: false,
+        card: deck.shift(),
+        correct: [],
+        incorrect: [],
+        answer: answer,
+        displayNextCard: displayNextCard,
+        displayFinishedCard: displayFinishedCard
+    }
+&nbsp;
+    _.assign(this, _this);
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function answer(isCorrect) {</span>
+<span class="cstat-no" title="statement not covered" >        if (isCorrect) {</span>
+<span class="cstat-no" title="statement not covered" >            this.correct.push(this.card);</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >            this.incorrect.push(this.card);</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (this.deck.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >            this.displayNextCard();</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >            this.displayFinishedCard();</span>
+        }
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function displayNextCard() {</span>
+<span class="cstat-no" title="statement not covered" >        this.card = this.deck.shift();</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function displayFinishedCard() {</span>
+<span class="cstat-no" title="statement not covered" >        this.isEndOfDeck = true;</span>
+<span class="cstat-no" title="statement not covered" >        this.card = this.finishedCard;</span>
+    }
 &nbsp;
 }]);</pre></td></tr>
 </table></pre>
@@ -169,7 +283,7 @@
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Jun 20 2016 18:57:39 GMT+0100 (BST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Jun 20 2016 19:26:54 GMT+0100 (BST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

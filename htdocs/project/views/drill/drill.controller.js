@@ -32,10 +32,48 @@ app.controller('DrillController', [ '$scope', function($scope) {
     	}
     ]
 
-    var scope = {
-    	deck: deck
+    var finishedCard = {
+        front: {
+            "title": "You Have Finished",
+            "text": "doop doop dewoop"
+        }
     }
 
-    _.assign($scope, scope);
+    var _this = {
+    	deck: deck,
+        finishedCard: finishedCard,
+        isEndOfDeck: false,
+        card: deck.shift(),
+        correct: [],
+        incorrect: [],
+        answer: answer,
+        displayNextCard: displayNextCard,
+        displayFinishedCard: displayFinishedCard
+    }
+
+    _.assign(this, _this);
+
+    function answer(isCorrect) {
+        if (isCorrect) {
+            this.correct.push(this.card);
+        } else {
+            this.incorrect.push(this.card);
+        }
+
+        if (this.deck.length > 0) {
+            this.displayNextCard();
+        } else {
+            this.displayFinishedCard();
+        }
+    }
+
+    function displayNextCard() {
+        this.card = this.deck.shift();
+    }
+
+    function displayFinishedCard() {
+        this.isEndOfDeck = true;
+        this.card = this.finishedCard;
+    }
 
 }]);

@@ -6,16 +6,16 @@
 	<main class="Table">
 		<div class="WorkArea">
 
-			<fl-card card="deck[0]"></fl-card>
+			<fl-card card="drill.card"></fl-card>
 
 			<div class="WorkArea-result">
 				<div class="ButtonWrapper">
-					<div class="Button--positive">
+					<div class="Button--positive" ng-click="drill.answer(true)" ng-hide="drill.isEndOfDeck">
 						Correct
 					</div>
 				</div>
 				<div class="ButtonWrapper">
-					<div class="Button--negative">
+					<div class="Button--negative" ng-click="drill.answer(false)" ng-hide="drill.isEndOfDeck">
 						Incorrect
 					</div>
 				</div>

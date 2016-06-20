@@ -25,8 +25,15 @@ describe('controller: Drill', function(){
         });
     });
     
-    it('It should initialise', function(){
+    it('should initialise', function(){
         expect(scope).toBeDefined();
     });
+
+    xit('should display finished card if no deck cards left', function() {
+        scope.$apply();
+        // scope.deck = [];
+        // scope.answer(true);
+        expect(scope.deck).toBe(true);
+    })
 
 });
