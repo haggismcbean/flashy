@@ -324,6 +324,15 @@ body {
   background-color: #30241a;
   height: 50px;
   padding: 15px; }
+  .Deck .ThumbCard:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid #30241a;
+    border-left: 10px solid #eee; }
 
 .Deck-cards {
   float: right; }
@@ -335,7 +344,8 @@ body {
   background-color: white;
   height: 30px;
   display: inline-block;
-  margin-left: 20px; }
+  margin-left: 20px;
+  margin-bottom: 10px; }
   .ThumbCard .ThumbCard-header {
     height: 5px;
     background-color: #A39D9D;
@@ -353,7 +363,7 @@ body {
     right: 0;
     width: 0;
     height: 0;
-    border-bottom: 10px solid #30241a;
+    border-bottom: 10px solid #edeae6;
     border-left: 10px solid #eee; }
 
 .Drill {
@@ -381,7 +391,8 @@ body {
   width: 100%;
   display: inline-block; }
   .Answers-correct h2, .Answers-incorrect h2 {
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 10px; }
 
 .WorkArea .WorkArea-result {
   display: inline-block;
