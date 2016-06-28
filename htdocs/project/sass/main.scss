@@ -18,9 +18,11 @@
 // Directives
 //////////////////////////
 
-@import 'directives/header';
-@import 'directives/footer';
-@import 'directives/card';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/card';
+@import 'components/deck';
+@import 'components/thumb-card';
 
 //////////////////////////
 // Views

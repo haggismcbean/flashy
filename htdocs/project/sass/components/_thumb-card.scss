@@ -1,0 +1,34 @@
+.ThumbCard {
+	position: relative;
+	width: 55px;
+	padding: 10px 10px;
+	background-color: white;
+	height: 30px;
+	display: inline-block;
+	margin-left: 20px;
+
+	.ThumbCard-header {
+		height: 5px;
+		background-color: $grey;
+		width: 75%;
+		margin-bottom: 5px;
+	}
+
+	.ThumbCard-text {
+		height: 5px;
+		background-color: lighten($grey, 10%);
+		width: 100%;
+		margin-bottom: 5px;
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 0;
+		height: 0;
+		border-bottom: 10px solid $black;
+		border-left: 10px solid #eee;
+	}
+}
