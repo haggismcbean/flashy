@@ -2,6 +2,17 @@
 	<fl-deck deck="drill.deck"></fl-deck>
 
 	<main class="Table">
+
+		<div class="Answers">
+			<div class="Answers-correct">
+				<h2>Correct: {{drill.correct.length}}</h2>
+				<fl-pile pile="drill.correct"><fl-pile>
+			</div><div class="Answers-incorrect">
+				<h2>Incorrect: {{drill.incorrect.length}}</h2>
+				<fl-pile pile="drill.incorrect"><fl-pile>
+			</div>
+		</div>
+
 		<div class="WorkArea">
 
 			<fl-card card="drill.card"></fl-card>

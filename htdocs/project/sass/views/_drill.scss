@@ -13,6 +13,24 @@
 	position: relative;
 }
 
+.Answers{
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translate(0, -50%);
+	width: 200px;
+	height: 400px;
+}
+
+.Answers-correct, .Answers-incorrect{
+	height: 50%;
+	width: 100%;
+	display: inline-block;
+	h2{
+		text-align: center;
+	}
+}
+
 .WorkArea{
 	@extend .u-center;
 

@@ -368,6 +368,21 @@ body {
   flex: 1 1 auto;
   position: relative; }
 
+.Answers {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 200px;
+  height: 400px; }
+
+.Answers-correct, .Answers-incorrect {
+  height: 50%;
+  width: 100%;
+  display: inline-block; }
+  .Answers-correct h2, .Answers-incorrect h2 {
+    text-align: center; }
+
 .WorkArea .WorkArea-result {
   display: inline-block;
   position: relative;
