@@ -14,18 +14,27 @@ Angular flash cards app with unit testing
 
  - fonts - done
  - colours - done
- - universal
- - grid
- - header
- - footer
- - card
- - deck
- - table
+ - universal - done
+ - grid - done
+ - header - done
+ - footer - done
+ - card - done
+ - deck - done
+ - table - done
 
 ##Stage Two: Front end pages with mocked apis
 
  - Drill
+ 	- Correct & Incorrect Buckets
+ 	- Deck list to stack if too many cards
+ 	- Responsive
  - Deck builder/manager
+ 	- Multiple Decks (activate/edit)
+ 	- Card viewer/editor page
+ 	- Example decks 
+ 		- Capital cities
+ 		- Chess tactics or openings (?)
+ 		- Famous dates
 
 ##Stage Three: Polish the front end
 
@@ -39,6 +48,6 @@ Angular flash cards app with unit testing
 
 ##Stretch:
 
- - Multiple decks
  - Preferences
  - Stats
+ - Chess
