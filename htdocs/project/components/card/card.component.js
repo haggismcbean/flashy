@@ -14,7 +14,7 @@ function CardComponentController() {
 angular.module('app').component('flCard', {
 	templateUrl: 'project/components/card/card.html',
 	bindings: {
-		card: '='
+		card: '<'
 	},
 	controller: CardComponentController
 });

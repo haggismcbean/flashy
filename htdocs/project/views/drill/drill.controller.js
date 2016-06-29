@@ -1,36 +1,36 @@
 app.controller('DrillController', [ '$scope', function($scope) {
-    var deck = [
+    var deck = Immutable.List([
     	{
     		front: {
-    			title: "Front",
+    			title: "1",
     			text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     		},
     		back: {
-    			title: "Back",
+    			title: "1",
     			text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     		}
     	},
     	{
     		front: {
-    			title: "2Front",
+    			title: "2",
     			text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     		},
     		back: {
-    			title: "2Back",
+    			title: "2",
     			text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     		}
     	},
     	{
     		front: {
-    			title: "3Front",
+    			title: "3",
     			text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     		},
     		back: {
-    			title: "3Back",
+    			title: "3",
     			text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     		}
     	}
-    ]
+    ])
 
     var finishedCard = {
         front: {
@@ -39,41 +39,46 @@ app.controller('DrillController', [ '$scope', function($scope) {
         }
     }
 
-    var _this = {
-    	deck: deck,
+    var _ctrl = {
         finishedCard: finishedCard,
+        deck: deck,
         isEndOfDeck: false,
         card: deck.shift(),
-        correct: [],
-        incorrect: [],
+        correct: Immutable.List([]),
+        incorrect: Immutable.List([]),
         answer: answer,
         displayNextCard: displayNextCard,
         displayFinishedCard: displayFinishedCard
     }
 
-    _.assign(this, _this);
+    var ctrl = this;
+
+    _.assign(ctrl, _ctrl);
+
+    ctrl.displayNextCard();    
 
     function answer(isCorrect) {
         if (isCorrect) {
-            this.correct.push(this.card);
+            ctrl.correct = ctrl.correct.push(ctrl.card);
         } else {
-            this.incorrect.push(this.card);
+            ctrl.incorrect = ctrl.incorrect.push(ctrl.card);
         }
 
-        if (this.deck.length > 0) {
-            this.displayNextCard();
+        if (ctrl.deck.size > 0) {
+            ctrl.displayNextCard();
         } else {
-            this.displayFinishedCard();
+            ctrl.displayFinishedCard();
         }
     }
 
     function displayNextCard() {
-        this.card = this.deck.shift();
+        ctrl.card = ctrl.deck.first();
+        ctrl.deck = ctrl.deck.shift();
     }
 
     function displayFinishedCard() {
-        this.isEndOfDeck = true;
-        this.card = this.finishedCard;
+        ctrl.isEndOfDeck = true;
+        ctrl.card = ctrl.finishedCard;
     }
 
 }]);

@@ -1,0 +1,26 @@
+{
+  "name": "flashy",
+  "description": "Flashcards app",
+  "main": "index.js",
+  "authors": [
+    "Harry Bishop"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/haggismcbean/flashy",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "htdocs/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-mocks": "^1.5.6",
+    "angular-ui-router": "^0.3.1",
+    "karma-read-json": "^1.1.0",
+    "angular": "^1.5.6",
+    "lodash": "^4.13.1",
+    "reset-css": "^2.0.2011012603"
+  }
+}

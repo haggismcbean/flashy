@@ -1,6 +1,7 @@
 describe('controller: DrillController', function(){
     var scope;
     var ctrl;
+    var Immutable = Immutable;
     
     beforeEach(function(){
         // boot modules
@@ -20,12 +21,12 @@ describe('controller: DrillController', function(){
 
     it('should add a card to the correct array if answer is correct', function(){
         ctrl.answer(true);
-        expect(ctrl.correct.length).toBe(1);
+        expect(ctrl.correct.size).toBe(1);
     });
 
     it('should add a card to the incorrect array if answer is incorrect', function(){
         ctrl.answer(false);
-        expect(ctrl.incorrect.length).toBe(1);
+        expect(ctrl.incorrect.size).toBe(1);
     });
 
     it('should hide the correct and incorrect buttons if there are no cards left in the deck', function() {

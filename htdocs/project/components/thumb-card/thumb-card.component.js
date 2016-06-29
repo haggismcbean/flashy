@@ -9,7 +9,7 @@ function ThumbCardComponentController() {
 angular.module('app').component('flThumbCard', {
 	templateUrl: 'project/components/thumb-card/thumb-card.html',
 	bindings: {
-		card: '='
+		card: '<'
 	},
 	controller: ThumbCardComponentController
 });

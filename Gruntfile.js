@@ -5,7 +5,9 @@ module.exports = function (grunt) {
     var bowerJsFiles = [
         'htdocs/bower_components/angular/angular.min.js',
         'htdocs/bower_components/angular-ui-router/release/angular-ui-router.min.js',
-        'htdocs/bower_components/lodash/dist/lodash.min.js'
+        'htdocs/bower_components/lodash/dist/lodash.min.js',
+        'htdocs/bower_components/immutable/dist/immutable.min.js',
+        'htdocs/bower_components/immutable-angular/scripts/immutable.js'
     ];
 
     var bowerCssFiles = [
