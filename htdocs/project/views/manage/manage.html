@@ -1,1 +1,10 @@
-<h2>Manage</h2>
+<div ng-controller="ManageController as manager">
+	<h2>Manage</h2>
+	<h3>Decks</h3>
+	<ol>
+		<li ng-repeat="deck in manager.decks">
+			<fl-deck-summary deck="deck"></fl-deck-summary>
+		</li>
+	</ol>
+	
+</div>

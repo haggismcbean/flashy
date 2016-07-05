@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for project/components/thumb-card/thumb-card.component.js</title>
+    <title>Code coverage report for project/views/manage/manage.controller.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../index.html">all files</a> / <a href="index.html">project/components/thumb-card/</a> thumb-card.component.js
+      <a href="../../../index.html">all files</a> / <a href="index.html">project/views/manage/</a> manage.controller.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>5/5</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>5/5</span>
       </div>
     </div>
   </div>
@@ -58,37 +58,58 @@
 13
 14
 15
-16</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+16
+17
+18
+19
+20
+21
+22
+23</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">function ThumbCardComponentController() {
-	var _this = {
-	}
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">app.controller('ManageController', [ function() {
+	var decks = [
+		{
+			name: "Deck 1",
+			description: "first deck",
+			cards: []
+		},
+		{
+			name: "Deck 2",
+			description: "the second deck I made",
+			cards: []
+		}
+	]
 &nbsp;
-	_.assign(this, _this);
+    var _ctrl = {
+    	decks: decks
+    }
 &nbsp;
-}
+    var ctrl = this;
 &nbsp;
-angular.module('app').component('flThumbCard', {
-	templateUrl: 'project/components/thumb-card/thumb-card.html',
-	bindings: {
-		card: '&lt;'
-	},
-	controller: ThumbCardComponentController
-});
-&nbsp;</pre></td></tr>
+    _.assign(ctrl, _ctrl);
+&nbsp;
+}]);</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
