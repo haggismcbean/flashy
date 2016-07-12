@@ -3,7 +3,7 @@
 	<h3>Decks</h3>
 	<ol>
 		<li ng-repeat="deck in manager.decks">
-			<fl-deck-summary deck="deck"></fl-deck-summary>
+			<fl-deck-summary deck="deck" ui-sref="deck({deckId: deck.id})"></fl-deck-summary>
 		</li>
 	</ol>
 	

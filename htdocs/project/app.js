@@ -32,6 +32,10 @@ function(
     .state('components', {
         url:'/components',
         templateUrl: 'project/views/components/components.html'
+    })
+    .state('deck', {
+        url:'/manage/deck/:deckId',
+        templateUrl: 'project/views/manage/deck/deck.html'
     });
 }]);
 
