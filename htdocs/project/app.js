@@ -35,7 +35,7 @@ function(
     })
     .state('deck', {
         url:'/manage/deck/:deckId',
-        templateUrl: 'project/views/manage/deck/deck.html'
+        templateUrl: 'project/views/manage/deck-manager/deck-manager.html'
     });
 }]);
 
