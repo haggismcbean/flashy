@@ -1,4 +1,7 @@
-<div ui-sref="deck">
+<div ui-sref="deck" class="DeckSummary">
 	<h3>{{$ctrl.deck.name}}</h3>
 	<p>{{$ctrl.deck.description}}</p>
+	<div>
+		<p>Number of Cards: <span>{{$ctrl.deck.cards.count()}}</span></p>
+	</div>
 </div>

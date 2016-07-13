@@ -337,6 +337,16 @@ body {
 .Deck-cards {
   float: right; }
 
+.DeckSummary {
+  background-color: white;
+  height: 300px;
+  width: 300px;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 20px;
+  cursor: pointer;
+  padding: 20px; }
+
 .ThumbCard {
   position: relative;
   width: 55px;
@@ -400,5 +410,8 @@ body {
   top: 50px; }
   .WorkArea .WorkArea-result :first-child {
     margin-bottom: 2px; }
+
+.Manage li {
+  display: inline-block; }
 
 /*# sourceMappingURL=style.css.map */

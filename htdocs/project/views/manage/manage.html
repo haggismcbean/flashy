@@ -1,6 +1,4 @@
-<div ng-controller="ManageController as manager">
-	<h2>Manage</h2>
-	<h3>Decks</h3>
+<div ng-controller="ManageController as manager" class="Manage">
 	<ol>
 		<li ng-repeat="deck in manager.decks">
 			<fl-deck-summary deck="deck" ui-sref="deck({deckId: deck.id})"></fl-deck-summary>

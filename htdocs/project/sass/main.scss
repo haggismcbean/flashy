@@ -22,6 +22,7 @@
 @import 'components/footer';
 @import 'components/card';
 @import 'components/deck';
+@import 'components/deck-summary';
 @import 'components/thumb-card';
 @import 'components/pile';
 
@@ -30,3 +31,4 @@
 //////////////////////////
 
 @import 'views/drill';
+@import 'views/manage';
