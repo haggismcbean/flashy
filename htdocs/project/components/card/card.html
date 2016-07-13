@@ -1,49 +1,38 @@
 <div class="Card">
 	<div class="Card-front" ng-show="$ctrl.isFront">
-		<h2 class="Card-header" 
-			ng-show="!$ctrl.isPropertyEditable('front', 'title')" 
-			ng-click="$ctrl.editProperty('front', 'title')">
-			{{$ctrl.card.front.title}}
-		</h2>
-		<h2 class="Card-header" 
-			ng-show="$ctrl.isPropertyEditable('front', 'title')">
-			BOOM
-		</h2>
 
-		<p class="Card-text"
-			ng-show="!$ctrl.isPropertyEditable('front', 'text')" 
-			ng-click="$ctrl.editProperty('front', 'text')">
-			{{$ctrl.card.front.text}}
-		</p>
-		<h2 class="Card-header" 
-			ng-show="$ctrl.isPropertyEditable('front', 'text')">
-			BOOM
-		</h2>
+		<fl-editable-field 
+			field-value="$ctrl.card.front.title" 
+			field-type="text" 
+			on-update="$ctrl.update('front', 'title', value)"
+		>
+		</fl-editable-field>
+
+		<fl-editable-field 
+			field-value="$ctrl.card.front.text" 
+			field-type="text" 
+			on-update="$ctrl.update('front', 'text', value)"
+		>
+		</fl-editable-field>
 
 
 		<h3 class="Card-ident">Front</h3>
 	</div>
 
 	<div class="Card-back" ng-show="!$ctrl.isFront">
-		<h2 class="Card-header"
-			ng-show="!$ctrl.isPropertyEditable('back', 'title')" 
-			ng-click="$ctrl.editProperty('back', 'title')">
-			{{$ctrl.card.back.title}}
-		</h2>
-		<h2 class="Card-header" 
-			ng-show="$ctrl.isPropertyEditable('back', 'title')">
-			BOOM
-		</h2>
+		<fl-editable-field 
+			field-value="$ctrl.card.back.title" 
+			field-type="text" 
+			on-update="$ctrl.update('back', 'title', value)"
+		>
+		</fl-editable-field>
 
-		<p class="Card-text"
-			ng-show="!$ctrl.isPropertyEditable('back', 'text')" 
-			ng-click="$ctrl.editProperty('back', 'text')">
-			{{$ctrl.card.back.text}}
-		</p>
-		<h2 class="Card-header" 
-			ng-show="$ctrl.isPropertyEditable('back', 'text')">
-			BOOM
-		</h2>
+		<fl-editable-field 
+			field-value="$ctrl.card.back.text" 
+			field-type="text" 
+			on-update="$ctrl.update('back', 'text', value)"
+		>
+		</fl-editable-field>
 
 
 		<h3 class="Card-ident">Back</h3>

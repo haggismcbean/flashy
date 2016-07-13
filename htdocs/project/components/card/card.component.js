@@ -2,9 +2,7 @@ function CardComponentController() {
 	var _this = {
 		isFront: true,
 		flipSide: flipSide,
-		editableProperty: {},
-		editProperty: editProperty,
-		isPropertyEditable: isPropertyEditable
+		update: update
 	}
 
 	_.assign(this, _this);
@@ -17,18 +15,13 @@ function CardComponentController() {
 		this.isFront = !this.isFront;
 	}
 
-	function editProperty(side, property) {
-		if (this.isCardEditable) {
-			this.editableProperty.side = side;
-			this.editableProperty.property = property;
-		}
-	}
-
-	function isPropertyEditable(side, property) {
-		if (this.editableProperty.side === side && this.editableProperty.property === property) {
-			return true;
-		}
-		return false;
+	function update(side, property, value) {
+		this.onUpdate({
+			card: this.card,
+			side: side,
+			property: property,
+			value: value
+		})
 	}
 }
 
@@ -36,7 +29,8 @@ angular.module('app').component('flCard', {
 	templateUrl: 'project/components/card/card.html',
 	bindings: {
 		card: '<',
-		isCardEditable: '<'
+		isCardEditable: '<',
+		onUpdate: '&'
 	},
 	controller: CardComponentController
 });

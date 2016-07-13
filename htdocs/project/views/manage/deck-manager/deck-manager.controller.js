@@ -3,7 +3,8 @@ app.controller('ManageDeckController', [ '$stateParams', 'deckService', function
 
     var _ctrl = {
     	deck: deck.cards,
-    	displayNextCard: displayNextCard
+    	displayNextCard: displayNextCard,
+    	updateCard: updateCard
     }
 
     var ctrl = this;
@@ -15,6 +16,14 @@ app.controller('ManageDeckController', [ '$stateParams', 'deckService', function
     function displayNextCard() {
         ctrl.card = ctrl.deck.first();
         ctrl.deck = ctrl.deck.shift();
+    }
+
+    function updateCard(card, side, property, value) {
+    	console.log("tada!!!");
+    	console.log(card);
+    	console.log(side);
+    	console.log(property);
+    	console.log(value);
     }
 
 }]);
