@@ -6,6 +6,10 @@ function CardComponentController() {
 
 	_.assign(this, _this);
 
+	this.$onChanges = function(changes) {
+		this.card = this.card.toJS();
+	}
+
 	function flipSide() {
 		this.isFront = !this.isFront;
 	}

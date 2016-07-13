@@ -1,12 +1,12 @@
 app.controller('DrillController', [ '$scope', 'deckService', function($scope, deckService) {
     var deck = deckService.getDeck(1).cards;
 
-    var finishedCard = {
-        front: {
+    var finishedCard = Immutable.Map({
+        front: Immutable.Map({
             "title": "You Have Finished",
             "text": "doop doop dewoop"
-        }
-    }
+        })
+    })
 
     var _ctrl = {
         finishedCard: finishedCard,
