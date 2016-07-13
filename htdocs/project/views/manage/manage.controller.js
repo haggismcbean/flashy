@@ -1,21 +1,8 @@
-app.controller('ManageController', [ function() {
-	var decks = [
-		{
-			name: "Deck 1",
-			id: 1,
-			description: "first deck",
-			cards: []
-		},
-		{
-			name: "Deck 2",
-			id: 2,
-			description: "the second deck I made",
-			cards: []
-		}
-	]
+app.controller('ManageController', [ 'deckService', function(deckService) {
+	var decks = deckService.getAllDecks();
 
     var _ctrl = {
-    	decks: decks
+    	decks: decks.toJS()
     }
 
     var ctrl = this;
