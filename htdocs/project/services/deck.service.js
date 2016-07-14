@@ -19,9 +19,19 @@ angular.module('app')
         });
     };
 
-    // deckService.updateDeck = function(deck){
+    deckService.updateDeck = function(updatedDeck){
 
-    // };
+        // First we find the index of the deck we want to update
+        var deckIndex = decks.findIndex(function(value, index, other) {
+            return value.id === updatedDeck.id;
+        })
+
+        // then we convert the deck we received from the controller to an immutable object
+        updatedDeck = Immutable.Map(updatedDeck);
+
+        // then we update the deck
+        decks.set(deckIndex, updatedDeck);
+    };
 
     // deckService.deleteDeck = function(deck){
 

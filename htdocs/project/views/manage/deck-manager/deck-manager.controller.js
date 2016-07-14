@@ -4,7 +4,8 @@ app.controller('ManageDeckController', [ '$stateParams', 'deckService', function
     var _ctrl = {
     	deck: deck.cards,
     	displayNextCard: displayNextCard,
-    	updateCard: updateCard
+    	updateCard: updateCard,
+        save: save
     }
 
     var ctrl = this;
@@ -14,16 +15,22 @@ app.controller('ManageDeckController', [ '$stateParams', 'deckService', function
     ctrl.displayNextCard();
 
     function displayNextCard() {
-        ctrl.card = ctrl.deck.first();
-        ctrl.deck = ctrl.deck.shift();
+        if (ctrl.card === undefined) {
+            ctrl.card = ctrl.deck.first();
+            ctrl.deck = ctrl.deck.shift();
+        }
     }
 
     function updateCard(card, side, property, value) {
-    	console.log("tada!!!");
-    	console.log(card);
-    	console.log(side);
-    	console.log(property);
-    	console.log(value);
+        ctrl.card = ctrl.card.toJS();
+        ctrl.card[side][property] = value;
+        ctrl.card = Immutable.Map(ctrl.card);
+    }
+
+    function save() {
+        ctrl.deck = ctrl.deck.push(ctrl.card);
+        deckService.updateDeck(ctrl.deck);
+        ctrl.deck = ctrl.deck.pop();
     }
 
 }]);

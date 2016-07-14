@@ -5,6 +5,7 @@
 			field-value="$ctrl.card.front.title" 
 			field-type="text" 
 			on-update="$ctrl.update('front', 'title', value)"
+			is-editable="$ctrl.isCardEditable"
 		>
 		</fl-editable-field>
 
@@ -12,6 +13,7 @@
 			field-value="$ctrl.card.front.text" 
 			field-type="text" 
 			on-update="$ctrl.update('front', 'text', value)"
+			is-editable="$ctrl.isCardEditable"
 		>
 		</fl-editable-field>
 
@@ -24,6 +26,7 @@
 			field-value="$ctrl.card.back.title" 
 			field-type="text" 
 			on-update="$ctrl.update('back', 'title', value)"
+			is-editable="$ctrl.isCardEditable"
 		>
 		</fl-editable-field>
 
@@ -31,6 +34,7 @@
 			field-value="$ctrl.card.back.text" 
 			field-type="text" 
 			on-update="$ctrl.update('back', 'text', value)"
+			is-editable="$ctrl.isCardEditable"
 		>
 		</fl-editable-field>
 

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for project/components/card/card.component.js</title>
+    <title>Code coverage report for project/components/editable-field/editable-field.component.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -16,32 +16,32 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../index.html">all files</a> / <a href="index.html">project/components/card/</a> card.component.js
+      <a href="../../../index.html">all files</a> / <a href="index.html">project/components/editable-field/</a> editable-field.component.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">80% </span>
+        <span class="strong">20% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>8/10</span>
+        <span class='fraction'>3/15</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>0/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/4</span>
+        <span class='fraction'>0/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">80% </span>
+        <span class="strong">20% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>8/10</span>
+        <span class='fraction'>3/15</span>
       </div>
     </div>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -79,30 +79,35 @@
 34
 35
 36
-37</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">3×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3×</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
+37
+38
+39
+40</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -115,41 +120,45 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">function CardComponentController() {
-	var _this = {
-		isFront: true,
-		flipSide: flipSide,
-		update: update
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="fstat-no" title="function not covered" >function EditableFieldComponentController() {</span>
+<span class="cstat-no" title="statement not covered" >	var _ctrl = {</span>
+		editMode: false,
+		handleModeChange: handleModeChange
 	}
 &nbsp;
-	_.assign(this, _this);
+<span class="cstat-no" title="statement not covered" >	var ctrl = this;</span>
 &nbsp;
-	this.$onChanges = <span class="fstat-no" title="function not covered" >function(changes) {</span>
-<span class="cstat-no" title="statement not covered" >		this.card = this.card.toJS();</span>
+<span class="cstat-no" title="statement not covered" >	_.assign(ctrl, _ctrl);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	ctrl.$onInit = <span class="fstat-no" title="function not covered" >function(changes) {</span></span>
+		// Set a default fieldType
+<span class="cstat-no" title="statement not covered" >		if (!ctrl.fieldType) {</span>
+<span class="cstat-no" title="statement not covered" >	  		ctrl.fieldType = 'text';</span>
+		}
 	}
 &nbsp;
-	function flipSide() {
-		this.isFront = !this.isFront;
-	}
-&nbsp;
-<span class="fstat-no" title="function not covered" >	function update(side, property, value) {</span>
-<span class="cstat-no" title="statement not covered" >		this.onUpdate({</span>
-			card: this.card,
-			side: side,
-			property: property,
-			value: value
-		})
+<span class="fstat-no" title="function not covered" >	function handleModeChange() {</span>
+<span class="cstat-no" title="statement not covered" >		if (!ctrl.isEditable) {</span>
+<span class="cstat-no" title="statement not covered" >			return;</span>
+		}
+<span class="cstat-no" title="statement not covered" >		if (ctrl.editMode) {</span>
+<span class="cstat-no" title="statement not covered" >			ctrl.onUpdate({value: ctrl.fieldValue});</span>
+<span class="cstat-no" title="statement not covered" >			ctrl.fieldValueCopy = ctrl.fieldValue;</span>
+		}
+<span class="cstat-no" title="statement not covered" >		ctrl.editMode = !ctrl.editMode;</span>
 	}
 }
 &nbsp;
-angular.module('app').component('flCard', {
-	templateUrl: 'project/components/card/card.html',
+angular.module('app').component('flEditableField', {
+	templateUrl: 'project/components/editable-field/editable-field.html',
 	bindings: {
-		card: '&lt;',
-		isCardEditable: '&lt;',
-		onUpdate: '&amp;'
+		fieldValue: '&lt;',
+	    fieldType: '@?',
+	    onUpdate: '&amp;',
+	    isEditable: '&lt;?'
 	},
-	controller: CardComponentController
+	controller: EditableFieldComponentController
 });
 &nbsp;</pre></td></tr>
 </table></pre>
