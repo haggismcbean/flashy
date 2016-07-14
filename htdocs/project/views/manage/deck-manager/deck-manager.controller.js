@@ -1,8 +1,8 @@
-app.controller('ManageDeckController', [ '$stateParams', 'deckService', function( $stateParams, deckService ) {
-	var deck = deckService.getDeck($stateParams.deckId);
+app.controller('ManageDeckController', [ '$scope', '$stateParams', 'deckService', function( $scope, $stateParams, deckService ) {
+	var deck = deckService.getDeck($stateParams.deckId).cards;
 
     var _ctrl = {
-    	deck: deck.cards,
+    	deck: deck,
     	displayNextCard: displayNextCard,
     	updateCard: updateCard,
         save: save
@@ -21,7 +21,7 @@ app.controller('ManageDeckController', [ '$stateParams', 'deckService', function
         }
     }
 
-    function updateCard(card, side, property, value) {
+    function updateCard(side, property, value) {
         ctrl.card = ctrl.card.toJS();
         ctrl.card[side][property] = value;
         ctrl.card = Immutable.Map(ctrl.card);
